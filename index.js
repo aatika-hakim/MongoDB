@@ -9,10 +9,13 @@ async function getData()
 {
     let res = await client.connect();
     let db = res.db(database);
-    let collection = db.collection('startup_log');
-    let response = await collection.find({}).toArray();
-
-    console.log(response);
+    return db.collection('startup_log');
 }
+// curd operations
+// getData().then((response)=>{
+//    response.find({}).toArray().then((data)=>{
+//     console.log(data);
+//    });
+// })
 
-getData();
+
