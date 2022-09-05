@@ -10,7 +10,7 @@ async function getData()
     let res = await client.connect();
     let db = res.db(database);
     let collection = db.collection('startup_log');
-    let response = await collection.find({allocator:'tcmalloc'}).toArray();
+    let response = await collection.find({}).toArray();
 
     console.log(response);
 }
