@@ -2,11 +2,11 @@ const getData = require('./mongodb');
 
 // insert data in mongodb
 
-const insert =  async () => {
+const insertData =  async () => {
     const data = await getData();
     const result = await data.insert(
         [
-       { name:'Windows', Ram:'64 bit'},
+            { name:'Windows', Ram:'64 bit',performance:'good'}, 
         ]
     );
 
@@ -15,5 +15,5 @@ if(result.acknowledged){
 }
 console.log(result);
 }
-insert();
+insertData();
 
