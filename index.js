@@ -1,17 +1,6 @@
-const {MongoClient, Db}= require('mongodb');
-let url = "mongodb://localhost:27017";
-let database = 'local';
-let client = new MongoClient(url);
+const getData = require('./mongodb');
 
-
-async function getData()
-{
-    let res = await client.connect();
-    let db = res.db(database);
-    return db.collection('startup_log');
-}
-// curd operations
-
+// read data from mongodb
 /*
     getData().then((response)=>{
     response.find({}).toArray().then((data)=>{
