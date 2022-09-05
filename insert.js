@@ -9,7 +9,7 @@ const insertData =  async () => {
             { name:'Windows', Ram:'64 bit',performance:'good'}, 
         ]
     );
-
+    
 if(result.acknowledged){
     console.log("inserted")
 }
