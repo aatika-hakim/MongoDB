@@ -31,4 +31,18 @@ const updateData = async () => {
   )
   console.log(data)
 }
-updateData()
+// updateData()
+
+const deleteData = async () => {
+  const dataModel = mongoose.model('users', dataSchema)
+  let data = await dataModel.deleteOne({ name: 'Lebsack' })
+  console.log(data)
+}
+// deleteData()
+
+const findData = async () => {
+    const dataModel = mongoose.model('users', dataSchema)
+    let data = await dataModel.find();
+    console.log(data)
+  }
+  findData()
