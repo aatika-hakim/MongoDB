@@ -11,11 +11,11 @@ app.get('/', async (req, resp) => {
   resp.send(data)
 })
 
-app.post('/',async (req,resp)=>{
-    let data = await getData();
-    data = await data.insert(req.body)
-    resp.send(data);
-});
+app.post('/', async (req, resp) => {
+  let data = await getData()
+  data = await data.insert(req.body)
+  resp.send(data)
+})
 
 app.put('/:name', async (req, resp) => {
   let data = await getData()
@@ -25,8 +25,8 @@ app.put('/:name', async (req, resp) => {
 
 app.delete('/:id', async (req, resp) => {
   let data = await getData()
-  data = await data.deleteOne({_id: new mongodb.ObjectId(req.params.id)});
-  resp.send(data);
+  data = await data.deleteOne({ _id: new mongodb.ObjectId(req.params.id) })
+  resp.send(data)
 })
 
 app.listen(5000)
