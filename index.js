@@ -1,4 +1,4 @@
-// const getData = require('./mongodb');
+ const getData = require('./mongodb');
 
 // read data from mongodb
 /*
@@ -8,10 +8,10 @@
     });
 }) */
 
-// let main = async () => {
-//     let data = await getData();
-//     data = await data.find().toArray();
-//     console.log(data);
-// }
-// main();
+ let main = async () => {
+     let data = await getData();
+     data = await data.find().toArray();
+     console.log(data);
+ }
+ main();
 

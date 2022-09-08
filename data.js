@@ -1,4 +1,4 @@
-const monngoose = require("mongoose");
+// const monngoose = require("mongoose");
 const express = require("express");
 const multer = require("multer");
 const app = express();
@@ -10,7 +10,7 @@ const upload = multer({
             cb(null,"myData")
         },
         filename:function(req,file,cb){
-            cb(null,file.fieldname + "-" + Date.now()+",jpg")
+            cb(null,file.fieldname + "-" + Date.now()+".jpg")
         }
     })
 }).single("web")
